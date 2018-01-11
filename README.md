@@ -9,10 +9,22 @@ In the second tutorial, I utilized Remix IDE in order to build a smart contract 
 
 https://medium.com/@merunasgrincalaitis/the-ultimate-end-to-end-tutorial-to-create-and-deploy-a-fully-descentralized-dapp-in-ethereum-18f0cf6d7e0e
 
+The below is a preview of what the finalized front end looks like
+
+![Casino](https://cdn-images-1.medium.com/max/1600/1*sMQnfgZ5wtQgfLBKlA1-9g.gif)
+
 Finally, I built a blockchain using Python to understand the nature of the decentralized ledger that forms the basis for the cryptocurrencies, and their associated craze today!
 
 https://medium.com/crypto-currently/lets-build-the-tiniest-blockchain-e70965a248b
 
 https://medium.com/crypto-currently/lets-make-the-tiniest-blockchain-bigger-ac360a328f4d
+
+Example of blockchain being built
+
+![Blockchain](./block.png)
+
+Example of block being mined and transaction record with server running
+
+![Blockchain](./block2.png)
 
 Apologies for the piecemeal approach to the Hack-a-thing assignment: rather than simply targeting one tutorial, I wanted to sample several facets of the the blockchain to facilitate a better understanding for when project time comes around.

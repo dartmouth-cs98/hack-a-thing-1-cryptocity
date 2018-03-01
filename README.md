@@ -1,4 +1,13 @@
-# hack-a-thing-1-cryptocity
+# Blockchain Work for COSC 98
+
+Please run the following commands to run the blockchain and smart contract applications smoothly.
+1. brew update
+2. brew upgrade
+3. brew tap ethereum/ethereum
+4. brew install ethereum
+5. solc -o target --bin --abi Greeter.sol
+
+
 I followed several tutorials in order to garner a better understanding of the blockchain.
 
 In the first tutorial, I built a Hello World voting application locally on a test Ethereum network, with full decentralized functionality

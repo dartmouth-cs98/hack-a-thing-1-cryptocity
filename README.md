@@ -1,12 +1,18 @@
 # Blockchain Work for COSC 98
 
+Note: several of these files are from previous hacking tutorials, so that I could integrate and utilize some of the blockchain work that I had done previous, for convenience
+
 Please run the following commands to run the blockchain and smart contract applications smoothly.
 1. brew update
 2. brew upgrade
 3. brew tap ethereum/ethereum
 4. brew install ethereum
-5. solc -o target --bin --abi Greeter.sol
+5. npm install -g solc
+6. solcjs -o target --bin --abi Greeter.sol
+7. geth
 
+Much of this blockchain follows from tutorials outlining how to build apps on the Ethereum network:
+https://www.ethereum.org/greeter
 
 I followed several tutorials in order to garner a better understanding of the blockchain.
 
@@ -37,3 +43,19 @@ Example of block being mined and transaction record with server running
 ![Blockchain](./block2.png)
 
 Apologies for the piecemeal approach to the Hack-a-thing assignment: rather than simply targeting one tutorial, I wanted to sample several facets of the the blockchain to facilitate a better understanding for when project time comes around.
+
+var _greeting = "Hello World!"
+
+var greeter = greeterFactory.new(_greeting,{from:eth.accounts[0],data:greeterCompiled,gas:47000000}, function(e, contract){
+    if(!e) {
+
+      if(!contract.address) {
+        console.log("Contract transaction send: TransactionHash: " + contract.transactionHash + " waiting to be mined...");
+
+      } else {
+        console.log("Contract mined! Address: " + contract.address);
+        console.log(contract);
+      }
+
+    }
+})

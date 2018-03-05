@@ -1,24 +1,24 @@
 contract mortal {
-    /* Define variable owner of the type address */
+    /* Define variable owner of the type address*/
     address owner;
 
-    /* This function is executed at initialization and sets the owner of the contract */
+    /* this function is executed at initialization and sets the owner of the contract */
     function mortal() { owner = msg.sender; }
 
     /* Function to recover the funds on the contract */
-    function kill() { if (msg.sender == owner) selfdestruct(owner); }
+    function kill() { if (msg.sender == owner) suicide(owner); }
 }
 
 contract greeter is mortal {
-    /* Define variable greeting of the type string */
+    /* define variable greeting of the type string */
     string greeting;
 
-    /* This runs when the contract is executed */
+    /* this runs when the contract is executed */
     function greeter(string _greeting) public {
         greeting = _greeting;
     }
 
-    /* Main function */
+    /* main function */
     function greet() constant returns (string) {
         return greeting;
     }

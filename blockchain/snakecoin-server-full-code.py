@@ -45,6 +45,11 @@ peer_nodes = []
 # A variable to deciding if we're mining or not
 mining = True
 
+@node.route('/')
+def main_page():
+    # Main page at root of api
+  return '<html><body><h5>Blockchain Server</h5></body></html>'
+
 @node.route('/txion', methods=['POST'])
 def transaction():
   # On each new POST request,
@@ -63,7 +68,7 @@ def transaction():
 
 @node.route('/blocks', methods=['GET'])
 def get_blocks():
-  chain_to_send = blockchain
+  chain_to_send = blockchain[:]
   # Convert our blocks into dictionaries
   # so we can send them as json objects later
   for i in range(len(chain_to_send)):
